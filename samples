@@ -1,0 +1,110 @@
+from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.button import Button
+
+class MyApp(App):
+    def build(self):
+        # არსებული მხარდაჭერაა
+        layout = BoxLayout(orientation='vertical')
+        for i in range(5):
+            # შექმნა და წარმოდგენა ღილაკის
+            # ტექსტის დასამატებლად
+            button = Button(text=f'Button {i}')
+            layout.add_widget(button)
+        return layout
+
+if __name__ == '__main__':
+    MyApp().run()
+
+########################################################################################
+
+from kivy.app import App
+from kivy.uix.image import AsyncImage
+from kivy.uix.boxlayout import BoxLayout
+
+class MyApp(App):
+    def build(self):
+        # ლეიაუთის შექმნა
+        layout = BoxLayout(orientation='vertical')
+        # სურათების მიღება ლინკების მეშვეობით
+        images = [
+            "https://example.com/image1.jpg",
+            "https://example.com/image2.jpg",
+            "https://example.com/image3.jpg",
+            "https://example.com/image4.jpg",
+            "https://example.com/image5.jpg"
+        ]
+        for image in images:
+            # სურათის დამატება ლეიაუთში
+            img = AsyncImage(source=image)
+            layout.add_widget(img)
+        return layout
+
+if __name__ == '__main__':
+    MyApp().run()
+
+
+########################################################################################
+
+from kivy.app import App
+from kivy.uix.textinput import TextInput
+from kivy.uix.boxlayout import BoxLayout
+
+class MyApp(App):
+    def build(self):
+        # ლეიაუთის შექმნა
+        layout = BoxLayout(orientation='vertical')
+        for i in range(5):
+            # ტექსტური ველის შექმნა
+            txt_input = TextInput(text=f'Input {i}')
+            # ტექსტური ველის დამატება ლეიაუთში
+            layout.add_widget(txt_input)
+        return layout
+
+if __name__ == '__main__':
+    MyApp().run()
+
+
+##################################################################################
+
+from kivy.app import App
+from kivy.uix.image import Image
+from kivy.uix.boxlayout import BoxLayout
+
+class MyApp(App):
+    def build(self):
+        # ლეიაუთის შექმნა
+        layout = BoxLayout(orientation='vertical')
+        for i in range(5):
+            # სურათის დამატება ლეიაუთში
+            img = Image(source=f'image_{i}.png')
+            layout.add_widget(img)
+        return layout
+
+if __name__ == '__main__':
+    MyApp().run()
+
+
+#####################################################################################
+
+from kivy.app import App
+from kivy.uix.textinput import TextInput
+from kivy.uix.button import Button
+from kivy.uix.boxlayout import BoxLayout
+
+class MyApp(App):
+    def build(self):
+        # ლეიაუთის შექმნა
+        layout = BoxLayout(orientation='vertical')
+        for i in range(5):
+            # ტექსტური ველის და ღილაკის შექმნა
+            txt_input = TextInput(text=f'Input {i}')
+            btn = Button(text=f'Button {i}')
+            # ტექსტური ველის და ღილაკის დამატება ლეიაუთში
+            layout.add_widget(txt_input)
+            layout.add_widget(btn)
+        return layout
+
+if __name__ == '__main__':
+    MyApp().run()
+
